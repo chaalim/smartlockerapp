@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Locker - Home</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="profile-section">
+      <img src="assets/profile.png" alt="Profile" class="avatar"/>
+      <button class="menu-btn" onclick="openSideMenu()">☰</button>
+    </div>
+    <div class="card">
+      <p>Welcome to LOCKER 01</p>
+      <small>SMART LOCKER SYSTEM</small><br/>
+      <small>LOCKER EXPIRES ON 6/30/25</small>
+    </div>
+    <button onclick="goToLockerLogs()">LOCKER LOGS</button>
+    <button onclick="goToItems()">ITEMS ON LOCKER</button>
+  </div>
+  <script>
+    function openSideMenu() {
+      window.location.href = "side-menu.html";
+    }
+    function goToLockerLogs() {
+      window.location.href = "locker-status.html";
+    }
+    function goToItems() {
+      window.location.href = "items.html";
+    }
+  </script>
+</body>
+</html>

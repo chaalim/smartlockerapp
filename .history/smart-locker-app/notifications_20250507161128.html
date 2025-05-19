@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Locker - Notifications</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <button onclick="goBack()">←</button>
+    <h2>NOTIFICATIONS</h2>
+    <div class="notifications">
+      <div class="notif">Smart Locker<br/><small>Your Smart Locker has been locked.</small></div>
+      <div class="notif">Smart Locker<br/><small>Item ‘Laptop’ removed successfully.</small></div>
+      <div class="notif">Smart Locker<br/><small>Unauthorized access attempt detected!</small></div>
+      <!-- Repeat as needed -->
+    </div>
+  </div>
+  <script>
+    function goBack() {
+      window.location.href = 'home.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Locker - Status</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <button onclick="goBack()">←</button>
+    <h2>Status: <span class="locked">LOCKED</span></h2>
+    <ul class="log-list">
+      <li>LOCKED - 8:12 AM</li>
+      <li>UNLOCKED - 7:30 AM</li>
+      <li>ATTEMPT - 7:15 AM</li>
+    </ul>
+    <div class="calendar">
+      <p>June 2025</p>
+      <!-- Placeholder calendar (can use a plugin or datepicker later) -->
+      <p>[Calendar UI Here]</p>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = 'home.html';
+    }
+  </script>
+</body>
+</html>

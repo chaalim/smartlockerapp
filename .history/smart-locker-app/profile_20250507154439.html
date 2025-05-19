@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - Smart Locker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container profile">
+    <div class="top-bar">
+      <button class="back-btn">←</button>
+      <img src="assets/user-icon.png" class="profile-icon" alt="Profile" />
+    </div>
+    <div class="profile-box">
+      <h2>My Profile</h2>
+      <div class="profile-details">
+        <div class="detail">
+          <strong>Username:</strong>
+          <span id="profile-username">JohnDoe</span>
+        </div>
+        <div class="detail">
+          <strong>Email:</strong>
+          <span id="profile-email">john.doe@example.com</span>
+        </div>
+        <div class="detail">
+          <strong>Locker:</strong>
+          <span id="profile-locker">LOCKER 01</span>
+        </div>
+        <div class="detail">
+          <strong>Expiration Date:</strong>
+          <span id="profile-expiry">05/30/25</span>
+        </div>
+      </div>
+      <button class="btn btn-edit" onclick="window.location.href='editprofile.html'">Edit Profile</button>
+    </div>
+  </div>
+</body>
+</html>

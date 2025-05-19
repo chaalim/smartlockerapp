@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Locker Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body, html, #root {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #e0f7f7;
+    }
+
+    body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .icon-box {
+      background-color: #ccf5f5;
+      padding: 15px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .rfid-locker {
+      width: 50px;
+      height: 50px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      text-align: left;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .sign-in-button {
+      background-color: black;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .sign-in-button:hover {
+      background-color: #333;
+    }
+
+    .forgot-password-link {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #131414;
+      text-decoration: none;
+    }
+
+    .forgot-password-link:hover {
+      text-decoration: underline;
+    }
+
+    .register-button {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      padding: 12px;
+      background-color: #ccf5f5;
+      border: 1px solid #3b3636;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      color: black;
+    }
+
+    .register-button:hover {
+      background-color: #b2ebeb;
+    }
+
+    .input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .btn-black {
+      background-color: #222;
+      color: white;
+    }
+
+    .link {
+      color: #00bfcf;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="icon-box">
+        <img src="rfid-locker-icon.png" alt="RFID Locker" class="rfid-locker">
+      </div>
+      <h1>Sign In</h1>
+      <form class="form">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="input" placeholder="Enter your username">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" class="input" placeholder="Enter your password">
+        
+        <button type="submit" class="btn btn-black sign-in-button">Sign In</button>
+      </form>
+      <a href="#" class="forgot-password-link">Forgot Password?</a>
+      <button class="register-button">Register</button>
+    </div>
+  </div>
+</body>
+</html>

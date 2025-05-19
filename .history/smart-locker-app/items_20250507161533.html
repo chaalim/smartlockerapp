@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Items on the Locker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <span class="icon">&#8592;</span>
+      <span class="icon">&#128276;</span>
+    </div>
+
+    <h2 style="text-align: center; margin: 30px 0 10px;">ITEMS ON THE LOCKER</h2>
+
+    <form id="item-form" style="width: 85%; margin: 0 auto;">
+      <input type="text" id="item-input" class="input" placeholder="Enter item name" required />
+      <button type="submit" class="dashboard-btn" style="margin-top: 10px;">Add Item</button>
+    </form>
+
+    <div class="item-list" id="item-list" style="width: 85%; margin: 20px auto;">
+      <div class="item dashboard-btn" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>BAG</span>
+        <button class="btn-remove">REMOVE</button>
+      </div>
+      <div class="item dashboard-btn" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>PE UNIFORM</span>
+        <button class="btn-remove">REMOVE</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('item-form');
+    const input = document.getElementById('item-input');
+    const itemList = document.getElementById('item-list');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const value = input.value.trim();
+      if (value !== '') {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item dashboard-btn';
+        itemDiv.style.display = 'flex';
+        itemDiv.style.justifyContent = 'space-between';
+        itemDiv.style.alignItems = 'center';
+        itemDiv.innerHTML = `<span>${value}</span><button class="btn-remove">REMOVE</button>`;
+        itemList.appendChild(itemDiv);
+        input.value = '';
+        itemDiv.querySelector('.btn-remove').addEventListener('click', () => {
+          itemDiv.remove();
+        });
+      }
+    });
+
+    document.querySelectorAll('.btn-remove').forEach(button => {
+      button.addEventListener('click', () => {
+        button.parentElement.remove();
+      });
+    });
+  </script>
+</body>
+</html>

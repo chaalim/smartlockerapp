@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Items on the Locker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>ITEMS ON THE LOCKER</h2>
+
+    <form id="item-form">
+      <input type="text" id="item-input" class="input" placeholder="Enter item name" required />
+      <button type="submit" class="btn btn-black">Add Item</button>
+    </form>
+
+    <div class="item-list" id="item-list">
+      <!-- Initial items -->
+      <div class="item">
+        <span>BAG</span>
+        <button class="btn-remove">REMOVE</button>
+      </div>
+      <div class="item">
+        <span>PE UNIFORM</span>
+        <button class="btn-remove">REMOVE</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('item-form');
+    const input = document.getElementById('item-input');
+    const itemList = document.getElementById('item-list');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const value = input.value.trim();
+      if (value !== '') {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item';
+        itemDiv.innerHTML = `<span>${value}</span><button class="btn-remove">REMOVE</button>`;
+        itemList.appendChild(itemDiv);
+        input.value = '';
+        itemDiv.querySelector('.btn-remove').addEventListener('click', () => {
+          itemDiv.remove();
+        });
+      }
+    });
+
+    // Remove initial items
+    document.querySelectorAll('.btn-remove').forEach(button => {
+      button.addEventListener('click', () => {
+        button.parentElement.remove();
+      });
+    });
+  </script>
+</body>
+</html>
