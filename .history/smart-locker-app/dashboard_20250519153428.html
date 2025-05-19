@@ -1,0 +1,33 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Locker – Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <span class="icon">&#9776;</span>
+      <span class="icon">&#128276;</span>
+    </div>
+    <div class="profile-icon">
+      <img src="assets/user-icon.png" alt="Profile" />
+    </div>
+    <div class="welcome-box">
+      <span class="close-btn">&times;</span>
+      <h2>Welcome, User!</h2>
+      <p>Your smart locker is ready.</p>
+    </div>
+    <div class="dashboard-buttons">
+      <button class="dashboard-btn" onclick="window.location.href='lockerstatus.html'">Locker Status</button>
+      <button class="dashboard-btn" onclick="window.location.href='items.html'">Input Items</button>
+      <button class="dashboard-btn" onclick="window.location.href='notifications.html'">Notifications</button>
+      <button class="dashboard-btn" onclick="window.location.href='profile.html'">Profile</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

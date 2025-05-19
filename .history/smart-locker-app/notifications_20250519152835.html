@@ -10,35 +10,36 @@
 <body>
   <div class="dashboard-container">
     <div class="dashboard-header">
+      <!-- menu icon -->
       <span class="icon" onclick="toggleMenu()">&#9776;</span>
-      <span class="icon" onclick="goTo('notifications.html')" title="Notifications">&#128276;</span>
+      <!-- bell icon now goes to notifications.html -->
+      <span class="icon" onclick="goTo('notifications.html')">&#128276;</span>
     </div>
 
-    <div class="profile-icon" onclick="goTo('profile.html')" style="cursor:pointer; margin: 20px 0; text-align:center;">
-      <img src="assets/user-icon.png" alt="Profile" style="width:80px; border-radius:50%;" />
+    <div class="profile-icon" onclick="goTo('profile.html')">
+      <img src="assets/user-icon.png" alt="Profile" />
     </div>
 
-    <div class="welcome-box" style="margin: 0 auto 20px;">
+    <div class="welcome-box">
       <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
       <h2>Welcome, User!</h2>
       <p>Your smart locker is ready.</p>
     </div>
 
-    <div class="dashboard-buttons" style="display:flex; flex-direction:column; gap:15px; width:240px; margin:0 auto;">
-      <!-- Updated to use the correct filename -->
-      <button class="dashboard-btn" onclick="goTo('locker-status.html')">
-        LOCKER LOGS
+    <div class="dashboard-buttons">
+      <button class="dashboard-btn" onclick="goTo('lockerstatus.html')">
+        Locker Status
       </button>
       <button class="dashboard-btn" onclick="goTo('items.html')">
-        ITEMS ON LOCKER
+        Input Items
       </button>
-    
+      <!-- Notifications button removed -->
       <button class="dashboard-btn" onclick="goTo('profile.html')">
         Profile
       </button>
     </div>
   </div>
 
-  <script src="js/app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

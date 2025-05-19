@@ -1,0 +1,27 @@
+<!-- items.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Locker – Items</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <span class="icon" onclick="window.location.href='dashboard.html'">&#8592;</span>
+      <span class="icon">&#128276;</span>
+    </div>
+    <h2>ITEMS ON THE LOCKER</h2>
+    <form id="item-form">
+      <input type="text" id="item-input" class="input" placeholder="Enter item name" required />
+      <button type="submit" class="dashboard-btn">Add Item</button>
+    </form>
+    <div class="item-list" id="item-list">
+      <!-- dynamically inserted items -->
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
